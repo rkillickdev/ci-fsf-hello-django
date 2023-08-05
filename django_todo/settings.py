@@ -27,13 +27,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-1j+9pfu5rx_&6r6rk%6ve5(e-w8#(lxomvlt=s3*6ee#qtt683'
+SECRET_KEY = os.environ.get('SECRET_KEY','django-insecure-1j+9pfu5rx_&6r6rk%6ve5(e-w8#(lxomvlt=s3*6ee#qtt683')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-rkillickdev-cifsfhellod-eawx47l5uws.ws-eu102.gitpod.io',
-                 'rkillickdev-django-todo-app-8cbc9c307f93.herokuapp.com'
+                 os.environ.get('HEROKU_HOSTNAME')
                  ]
 
 
